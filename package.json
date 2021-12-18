@@ -1,0 +1,11 @@
+{
+  "name": "take-api",
+  "version": "1.0.0",
+  "description": "api para o processo seletivo da Take Blip",
+  "main": "index.js",
+  "author": "Lucas Côrte <lucascorte@outlook.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
