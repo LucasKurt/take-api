@@ -28,9 +28,6 @@ class GitController {
     } else {
       res.json(filterData)
     }
-
-
-
   }
 }
 
