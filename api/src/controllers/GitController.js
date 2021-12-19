@@ -10,7 +10,18 @@ class GitController {
       const { data } = await axios.get(`https://api.github.com/users/takenet/repos?page=${i}&per_page=100`)
       filterData = [...filterData,...data]
     }
-    res.json(filterData.filter(repo => repo.language == 'C#'))     
+
+    filterData = filterData.filter(repo => repo.language == 'C#')
+
+    filterData = filterData.sort((a,b) => {
+      a = new Date(a.created_at).getTime()
+      b = new Date(b.created_at).getTime()
+
+      return a-b
+    })
+
+    res.json(filterData)
+
 
   }
 }
