@@ -1,4 +1,5 @@
 const axios = require('axios')
+const { query } = require('express')
 
 class GitController {
   async getRepoAction(req, res) {
@@ -20,7 +21,14 @@ class GitController {
       return a-b
     })
 
-    res.json(filterData)
+    console.log(req.query.repo)
+
+    if(req.query.repo) {
+      res.json(filterData[req.query.repo - 1])
+    } else {
+      res.json(filterData)
+    }
+
 
 
   }
