@@ -1,5 +1,5 @@
 {
-  "name": "take-api",
+  "name": "api",
   "version": "1.0.0",
   "description": "api para o processo seletivo da Take Blip",
   "main": "index.js",
